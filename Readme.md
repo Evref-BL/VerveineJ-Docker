@@ -10,11 +10,12 @@ To run this docker, first separate the sources and the dependency in two differe
 Then execute the following command:
 
 ```sh
-docker run -v <full/path/toSource>:/src -v [<full/path/toDependency>:/dependency] verveinej:v2.0.4 <verveineJOption> .
+docker pull badetitou/verveinej:v2.0.4
+docker run -v <full/path/toSource>:/src -v [<full/path/toDependency>:/dependency] badetitou/verveinej:v2.0.4 <verveineJOption> .
 ```
 
 ### Example
 
 ```sh
-docker run -v D:\Users\benoit.verhaeghe\Documents\git\badetitou\Carrefour\testing\src\:/src verveinej:v2.0.4 -format json -o testoutput.json .
+docker run -v D:\Users\benoit.verhaeghe\Documents\git\badetitou\Carrefour\testing\src\:/src badetitou/verveinej:v2.0.4 -format json -o testoutput.json .
 ```
