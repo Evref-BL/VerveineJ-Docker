@@ -15,4 +15,6 @@ docker run -v <full/path/toSource>:/src -v [<full/path/toDependency>:/dependency
 
 ### Example
 
+```sh
 docker run -v D:\Users\benoit.verhaeghe\Documents\git\badetitou\Carrefour\testing\src\:/src verveinej:v2.0.4 -format json -o testoutput.json .
+```
