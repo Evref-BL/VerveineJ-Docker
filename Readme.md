@@ -1,12 +1,12 @@
 # VerveineJ Dockerfile
 
-This docker file configure VerveineJ to be used with local system
+This docker file configures VerveineJ to be used with the local system
 
-It automatically use VerveineJ with the good Java version.
+It automatically uses VerveineJ with the good Java version.
 
 ## Command line
 
-To run this docker, first separate the sources and the dependency in two differents folder.
+To run this docker, first, separate the sources and the dependency into two different folders.
 Then execute the following command:
 
 ```sh
