@@ -31,4 +31,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/verveinej:${{ github.ref }}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/verveinej:${{ github.ref_name }}
