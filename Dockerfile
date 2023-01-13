@@ -17,4 +17,4 @@ RUN tar -xvf verveine.tar.gz
 
 WORKDIR /src
 
-ENTRYPOINT [ "/VerveineJ-3.0.4/verveinej.sh" ]
+ENTRYPOINT [ "/VerveineJ-3.0.5/verveinej.sh" ]
