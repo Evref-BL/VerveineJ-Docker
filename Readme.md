@@ -14,6 +14,13 @@ docker pull badetitou/verveinej:v3.0.7
 docker run -v <full/path/toSource>:/src -v [<full/path/toDependency>:/dependency] badetitou/verveinej:v3.0.7 <verveineJOption> .
 ```
 
+Note1: The option `-v <full/path/toDependency>:/dependency` binds (or mounts) a directory on the host computer to the `dependency` directory in the docker virtual machine.
+For VerveineJ to use it, it must receive the option: `-autocp ../dependency`.
+
+Note2: Similarly `-v <full/path/toSource>:/src` (`-v` for `-volume`) binds a directory on the host computer to the `src` directory in the docker virtual machine.
+VerveineJ in the docker image runs inside this `src` directory. Therefore, and because of the `.` at the end of the command, it parses any Java file in `src`.
+
+
 ### Example
 
 Basic example using docker desktop
