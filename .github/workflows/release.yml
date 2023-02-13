@@ -2,7 +2,7 @@ name: Release-Moose
 
 on:
   release:
-    types: [created, edited]
+    types: [published]
 
 
 
@@ -50,5 +50,5 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ steps.meta.outputs.tags }}:${{ github.ref_name }}
+          tags: ${{ env.IMAGE_NAME }}:${{ github.event.release.tag_name }}
           labels: ${{ steps.meta.outputs.labels }}
