@@ -7,7 +7,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: verveinej
+  IMAGE_NAME: evref-bl/verveinej
 
 jobs:
   build:
