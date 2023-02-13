@@ -7,7 +7,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: VerveineJ
+  IMAGE_NAME: verveinej
 
 jobs:
   build:
@@ -49,4 +49,4 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: evref-bl/verveinej:latest
+          tags: ${{ steps.meta.outputs.tags }}
