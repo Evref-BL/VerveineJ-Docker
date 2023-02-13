@@ -48,4 +48,4 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: Evref-BL/VerveineJ:latest
+          tags: evref-bl/verveinej:latest
