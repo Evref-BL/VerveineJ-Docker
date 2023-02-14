@@ -40,4 +40,36 @@ docker run --rm -v "/mnt/d/Developpement/git/evol-critics:/src" ghcr.io/evref-bl
 
 ## GitHub example
 
-> Todo
+Use the VerveineJ docker image in a GitHub action (example for version `v3.0.7`)
+
+```yml
+name: My CI
+
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        smalltalk: [  Moose64-10 ]
+    name: ${{ matrix.smalltalk }}
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: '0'
+      - uses: addnab/docker-run-action@v3
+        with:
+          registry: ghcr.io
+          image:  ghcr.io/evref-bl/verveinej:v3.0.7
+          options: -v ${{ github.workspace }}:/src
+          run: |
+            cd tests
+            /VerveineJ-3.0.7/verveinej.sh  -format json -o output.json -alllocals -anchor assoc .
+            cd ..
+
+```
