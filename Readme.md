@@ -4,6 +4,14 @@ This docker file configures VerveineJ to be used with the local system
 
 It automatically uses VerveineJ with the good Java version.
 
+## Releases 
+
+| tag name | release |
+| :---: | :---: |
+| `main` | Last release of this docker with latest VerveineJ |
+| `latest` | Latest VerveineJ release (potentially not with latest docker option) |
+| `vX.X.X` | Follow [VerveineJ releases](https://github.com/moosetechnology/VerveineJ) |
+
 ## Command line
 
 To run this docker, first, separate the sources and the dependency into two different folders.
