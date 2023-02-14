@@ -10,7 +10,7 @@ RUN mkdir dependency
 
 # Creating executable
 RUN /bin/sh -c "echo \"#!/bin/sh\" > /verveinej-docker.sh"
-RUN /bin/sh -c "echo \"/VerveineJ-3.0.7/verveinej.sh -autocp /dependency $* .\" >> /verveinej-docker.sh"
+RUN /bin/sh -c "echo \"/VerveineJ-3.0.7/verveinej.sh $* -autocp /dependency .\" >> /verveinej-docker.sh"
 RUN chmod +x /verveinej-docker.sh
 
 # Download VerveineJ
