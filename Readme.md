@@ -45,7 +45,6 @@ Use the VerveineJ docker image in a GitHub action (example for version `v3.0.7`)
 ```yml
 name: My CI
 
-
 on:
   push:
     branches: [ main ]
@@ -69,7 +68,7 @@ jobs:
           options: -v ${{ github.workspace }}:/src
           run: |
             cd tests
-            /VerveineJ-3.0.7/verveinej.sh  -format json -o output.json -alllocals -anchor assoc .
+            /VerveineJ-3.0.7/verveinej.sh -format json -o output.json -alllocals -anchor assoc .
             cd ..
 
 ```
