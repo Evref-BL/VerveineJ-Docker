@@ -44,11 +44,25 @@ docker run --rm -v "/mnt/d/Developpement/git/evol-critics:/src" ghcr.io/evref-bl
 
 ## GitLab example
 
-> Todo
+```yml
+parse:
+  stage: parse
+  image:     
+    name: ghcr.io/evref-bl/verveinej:v3.0.10
+    entrypoint: [""]
+  needs:
+  script:
+    - /VerveineJ-3.0.10/verveinej.sh -format json -o model.json -alllocals -anchor assoc -autocp ./repo ./src
+  artifacts:
+    paths:
+      - model.json
+  only:
+  - ci-backend
+```
 
 ## GitHub example
 
-Use the VerveineJ docker image in a GitHub action (example for version `v3.0.9`)
+Use the VerveineJ docker image in a GitHub action (example for version `v3.0.10`)
 
 ```yml
 name: My CI
@@ -72,11 +86,11 @@ jobs:
       - uses: addnab/docker-run-action@v3
         with:
           registry: ghcr.io
-          image:  ghcr.io/evref-bl/verveinej:v3.0.9
+          image:  ghcr.io/evref-bl/verveinej:v3.0.10
           options: -v ${{ github.workspace }}:/src
           run: |
             cd tests
-            /VerveineJ-3.0.7/verveinej.sh -format json -o output.json -alllocals -anchor assoc .
+            /VerveineJ-3.0.10/verveinej.sh -format json -o output.json -alllocals -anchor assoc .
             cd ..
 
 ```
