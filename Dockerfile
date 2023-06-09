@@ -10,11 +10,11 @@ RUN mkdir dependency
 
 # Creating executable
 RUN /bin/sh -c "echo \"#!/bin/sh\" > /verveinej-docker.sh"
-RUN /bin/sh -c "echo \"/VerveineJ-3.0.10/verveinej.sh $* -autocp /dependency .\" >> /verveinej-docker.sh"
+RUN /bin/sh -c "echo \"/VerveineJ-3.0.11/verveinej.sh $* -autocp /dependency .\" >> /verveinej-docker.sh"
 RUN chmod +x /verveinej-docker.sh
 
 # Download VerveineJ
-RUN wget -r https://github.com/moosetechnology/VerveineJ/archive/refs/tags/v3.0.10.tar.gz -O verveine.tar.gz 
+RUN wget -r https://github.com/moosetechnology/VerveineJ/archive/refs/tags/v3.0.11.tar.gz -O verveine.tar.gz 
 RUN tar -xvf verveine.tar.gz
 
 WORKDIR /src
