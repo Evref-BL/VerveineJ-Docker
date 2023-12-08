@@ -48,11 +48,11 @@ docker run --rm -v "/mnt/d/Developpement/git/evol-critics:/src" ghcr.io/evref-bl
 parse:
   stage: parse
   image:     
-    name: ghcr.io/evref-bl/verveinej:v3.0.13
+    name: ghcr.io/evref-bl/verveinej:v3.1.0
     entrypoint: [""]
   needs:
   script:
-    - /VerveineJ-3.0.13/verveinej.sh -format json -o model.json -alllocals -anchor assoc -autocp ./repo ./src
+    - /VerveineJ-3.1.0/verveinej.sh -format json -o model.json -alllocals -anchor assoc -autocp ./repo ./src
   artifacts:
     paths:
       - model.json
@@ -62,7 +62,7 @@ parse:
 
 ## GitHub example
 
-Use the VerveineJ docker image in a GitHub action (example for version `v3.0.13`)
+Use the VerveineJ docker image in a GitHub action (example for version `v3.1.0`)
 
 ```yml
 name: My CI
@@ -86,10 +86,10 @@ jobs:
       - uses: addnab/docker-run-action@v3
         with:
           registry: ghcr.io
-          image:  ghcr.io/evref-bl/verveinej:v3.0.13
+          image:  ghcr.io/evref-bl/verveinej:v3.1.0
           options: -v ${{ github.workspace }}:/src
           run: |
             cd tests
-            /VerveineJ-3.0.13/verveinej.sh -format json -o output.json -alllocals -anchor assoc .
+            /VerveineJ-3.1.0/verveinej.sh -format json -o output.json -alllocals -anchor assoc .
             cd ..
 ```

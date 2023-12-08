@@ -13,7 +13,7 @@ COPY verveinej-docker.sh /verveinej-docker.sh
 RUN chmod +x /verveinej-docker.sh
 
 # Download VerveineJ
-RUN wget -r https://github.com/moosetechnology/VerveineJ/archive/refs/tags/v3.0.13.tar.gz -O verveine.tar.gz 
+RUN wget -r https://github.com/moosetechnology/VerveineJ/archive/refs/tags/v3.1.0.tar.gz -O verveine.tar.gz 
 RUN tar -xvf verveine.tar.gz
 
 WORKDIR /src
