@@ -1,2 +1,2 @@
 #!/bin/bash
-/VerveineJ-3.1.1/verveinej.sh $@ -autocp /dependency .
+/VerveineJ-3.2.0/verveinej.sh $@ -autocp /dependency .
