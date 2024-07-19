@@ -1,4 +1,4 @@
-0FROM eclipse-temurin:17
+FROM eclipse-temurin:17
 
 
 # Update
