@@ -1,2 +1,2 @@
 #!/bin/bash
-java -jar VerveineJ.jar $@ -autocp /dependency .
+java -jar /VerveineJ.jar $@ -autocp /dependency .
