@@ -48,7 +48,7 @@ docker run --rm -v "/mnt/d/Developpement/git/evol-critics:/src" ghcr.io/evref-bl
 parse:
   stage: parse
   image:     
-    name: ghcr.io/evref-bl/verveinej:v3.2.3
+    name: ghcr.io/evref-bl/verveinej:v3.2.4
     entrypoint: [""]
   needs:
   script:
@@ -62,7 +62,7 @@ parse:
 
 ## GitHub example
 
-Use the VerveineJ docker image in a GitHub action (example for version `v3.2.3`)
+Use the VerveineJ docker image in a GitHub action (example for version `v3.2.4`)
 
 ```yml
 name: My CI
@@ -86,7 +86,7 @@ jobs:
       - uses: addnab/docker-run-action@v3
         with:
           registry: ghcr.io
-          image:  ghcr.io/evref-bl/verveinej:v3.2.3
+          image:  ghcr.io/evref-bl/verveinej:v3.2.4
           options: -v ${{ github.workspace }}:/src
           run: |
             cd tests
