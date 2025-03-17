@@ -52,7 +52,7 @@ parse:
     entrypoint: [""]
   needs:
   script:
-    - java -jar VerveineJ.jar -format json -o model.json -alllocals -anchor assoc -autocp ./repo ./src
+    - java -jar /VerveineJ.jar -format json -o model.json -alllocals -anchor assoc -autocp ./repo ./src
   artifacts:
     paths:
       - model.json
