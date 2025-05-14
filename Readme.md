@@ -28,12 +28,18 @@ docker run -v <full/path/toSource>:/src [-v <full/path/toDependency>:/dependency
 > Note2: Similarly `-v <full/path/toSource>:/src` (`-v` for `-volume`) binds a directory on the host computer to the `src` directory in the docker virtual machine.
 > VerveineJ in the docker image runs inside this `src` directory. Therefore, it parses any Java file in `src`.
 
+### Environment variable
+
+- `JAVA_XMX` can be used to set the max heap of the Java vm
+  
+  `-e JAVA_XMX=-Xmx4G`
+
 ### Example
 
 Basic example using docker desktop
 
 ```sh
-docker run --rm -v D:\Users\benoit.verhaeghe\Documents\git\badetitou\Carrefour\testing\src\:/src ghcr.io/evref-bl/verveinej:latest -format json -o testoutput.json
+docker run --rm -e JAVA_XMX=-Xmx4G -v D:\Users\benoit.verhaeghe\Documents\git\badetitou\Carrefour\testing\src\:/src ghcr.io/evref-bl/verveinej:latest -format json -o testoutput.json
 ```
 
 Another example with docker in Window **without** docker desktop but with docker in wsl2 (see [this blog post](https://dev.to/_nicolas_louis_/how-to-run-docker-on-windows-without-docker-desktop-hik))

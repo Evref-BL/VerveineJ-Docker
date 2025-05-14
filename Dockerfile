@@ -1,6 +1,5 @@
 FROM eclipse-temurin:17
 
-
 # Update
 RUN apt-get install -y wget
 
