@@ -34,6 +34,15 @@ docker run -v <full/path/toSource>:/src [-v <full/path/toDependency>:/dependency
   
   `-e JAVA_XMX=-Xmx4G`
 
+### Mac docker config
+
+By default, docker might allows not enough space for running the application.
+Do not hesitate to increase it.
+
+```sh
+colima start --cpu 4 --memory 16
+```
+
 ### Example
 
 Basic example using docker desktop
