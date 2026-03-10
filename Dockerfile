@@ -12,7 +12,7 @@ COPY verveinej-docker.sh /verveinej-docker.sh
 RUN chmod +x /verveinej-docker.sh
 
 # Download VerveineJ
-RUN wget https://github.com/moosetechnology/VerveineJ/releases/download/v4.2.1/VerveineJ-v4.2.1.jar -O /VerveineJ.jar
+RUN wget https://github.com/moosetechnology/VerveineJ/releases/download/v4.2.3/VerveineJ-v4.2.3.jar -O /VerveineJ.jar
 
 WORKDIR /src
 
