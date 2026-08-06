@@ -1,18 +1,19 @@
 FROM eclipse-temurin:25
 
 # Update
-RUN apt-get install -y wget
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends wget \
+    && rm -rf /var/lib/apt/lists/*
 
 # Set up file system
-RUN mkdir src
-RUN mkdir dependency
+RUN mkdir /src /dependency
 
 # Creating executable
-COPY verveinej-docker.sh /verveinej-docker.sh
-RUN chmod +x /verveinej-docker.sh
+COPY --chmod=755 verveinej-docker.sh /verveinej-docker.sh
 
 # Download VerveineJ
-RUN wget https://github.com/moosetechnology/VerveineJ/releases/download/v5.0.0/VerveineJ-v5.0.0.jar -O /VerveineJ.jar
+ARG VERVEINEJ_VERSION=v5.0.0
+RUN wget -O /VerveineJ.jar "https://github.com/moosetechnology/VerveineJ/releases/download/${VERVEINEJ_VERSION}/VerveineJ-${VERVEINEJ_VERSION}.jar"
 
 WORKDIR /src
 
