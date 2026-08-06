@@ -1,4 +1,4 @@
-FROM eclipse-temurin:17
+FROM eclipse-temurin:25
 
 # Update
 RUN apt-get install -y wget
