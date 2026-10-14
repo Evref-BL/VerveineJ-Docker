@@ -34,6 +34,8 @@ docker run -v <full/path/toSource>:/src [-v <full/path/toDependency>:/dependency
   
   `-e JAVA_XMX=-Xmx4G`
 
+Pass additional Java VM options before `--`; options after it are passed to VerveineJ. For example: `-Xmx16g -- -format json -alllocals`.
+
 ### Mac docker config
 
 By default, docker might allows not enough space for running the application.
