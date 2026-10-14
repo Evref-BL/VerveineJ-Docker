@@ -79,5 +79,5 @@ jobs:
           VERSION: ${{ steps.version.outputs.value }}
         run: |
           if ! gh release view "$VERSION" >/dev/null 2>&1; then
-            gh release create "$VERSION" --target main --generate-notes --title "VerveineJ $VERSION"
+            gh release create "$VERSION" --target main --generate-notes
           fi
