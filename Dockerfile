@@ -12,7 +12,7 @@ RUN mkdir /src /dependency
 COPY --chmod=755 verveinej-docker.sh /verveinej-docker.sh
 
 # Download VerveineJ
-ARG VERVEINEJ_VERSION=v5.1.0
+ARG VERVEINEJ_VERSION=v5.1.1
 RUN wget -O /VerveineJ.jar "https://github.com/moosetechnology/VerveineJ/releases/download/${VERVEINEJ_VERSION}/VerveineJ-${VERVEINEJ_VERSION}.jar"
 
 WORKDIR /src
